@@ -1,6 +1,6 @@
 # GCP Cost & Anomaly Watchdog
 
-An event-driven document intelligence pipeline on Google Cloud Platform, paired with automated cloud cost anomaly detection — built to explore both application-level serverless architecture and FinOps/cost-governance practices, which most student cloud projects skip entirely.
+An event-driven document intelligence pipeline on Google Cloud Platform, paired with automated cloud cost anomaly detection - built to explore both application-level serverless architecture and FinOps/cost-governance practices, which most student cloud projects skip entirely.
 
 ## What it does
 
@@ -11,7 +11,7 @@ An event-driven document intelligence pipeline on Google Cloud Platform, paired 
 
 ## Why this project
 
-Most beginner/intermediate cloud projects stop at "I deployed an app to the cloud." This project goes further by adding **cost observability** — a practice usually reserved for production systems — on top of a working event-driven application. The goal was to combine practical serverless architecture with an operational skill (cost governance) that's rarely demonstrated in student portfolios.
+Most beginner/intermediate cloud projects stop at "I deployed an app to the cloud." This project goes further by adding **cost observability** - a practice usually reserved for production systems - on top of a working event-driven application. The goal was to combine practical serverless architecture with an operational skill (cost governance) that's rarely demonstrated in student portfolios.
 
 ## Architecture
 
@@ -84,9 +84,9 @@ Most beginner/intermediate cloud projects stop at "I deployed an app to the clou
 
 ## Key Design Decisions
 
-- **Event-driven, not polling**: The document pipeline reacts to uploads via Cloud Storage triggers rather than checking on a schedule — no wasted compute.
-- **Noise filtering in anomaly detection**: The SQL query includes a minimum cost threshold (`daily_cost > 0.01`) to avoid flagging statistically meaningless spikes on near-zero spend days — a detail that separates a naive multiplier check from a usable one.
-- **Infrastructure as Code**: All resources are defined in Terraform. Note: resources were initially provisioned via console during development and later codified in Terraform for reproducibility and documentation — `terraform plan` has been validated against the file definitions.
+- **Event-driven, not polling**: The document pipeline reacts to uploads via Cloud Storage triggers rather than checking on a schedule - no wasted compute.
+- **Noise filtering in anomaly detection**: The SQL query includes a minimum cost threshold (`daily_cost > 0.01`) to avoid flagging statistically meaningless spikes on near-zero spend days - a detail that separates a naive multiplier check from a usable one.
+- **Infrastructure as Code**: All resources are defined in Terraform. Note: resources were initially provisioned via console during development and later codified in Terraform for reproducibility and documentation - `terraform plan` has been validated against the file definitions.
 
 ## Live Demo
 
